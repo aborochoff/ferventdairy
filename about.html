@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About - Fervent Dairy</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .page-content {
+      background-color: rgba(255, 255, 255, 0.95);
+      margin: 50px auto;
+      padding: 40px;
+      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      color: #333;
+      line-height: 1.6;
+    }
+    .back-link {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      transition: background-color 0.3s;
+    }
+    .back-link:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <nav class="menu">
+    <div class="menu-icon" onclick="toggleDropdown()">
+      <div class="hamburger"></div>
+      <div class="hamburger"></div>
+      <div class="hamburger"></div>
+    </div>
+    <div class="dropdown" id="dropdown">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="company.html">Company</a>
+    </div>
+  </nav>
+
+  <div class="page-content">
+    <a href="index.html" class="back-link">← Back to Home</a>
+    
+    <h1>About Fervent Dairy</h1>
+    
+    <p>Welcome to Fervent Dairy, where passion meets quality in every product we create. Founded with a commitment to excellence, we bring you the finest dairy products sourced from dedicated farmers who share our values.</p>
+    
+    <h2>Our Mission</h2>
+    <p>To provide exceptional dairy products while supporting sustainable farming practices and maintaining the highest standards of quality and freshness.</p>
+    
+    <h2>What We Offer</h2>
+    <ul>
+      <li>Fresh, locally-sourced milk</li>
+      <li>Artisanal cheeses crafted with care</li>
+      <li>Premium butter and cream products</li>
+      <li>Organic and traditional dairy options</li>
+    </ul>
+    
+    <h2>Our Commitment</h2>
+    <p>We believe in transparency, quality, and supporting our local farming community. Every product we offer reflects our fervent dedication to bringing you the best dairy experience possible.</p>
+  </div>
+
+  <script>
+    function toggleDropdown() {
+      document.getElementById("dropdown").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.menu-icon') && !event.target.matches('.hamburger')) {
+        var dropdown = document.getElementById("dropdown");
+        if (dropdown.classList.contains('show')) {
+          dropdown.classList.remove('show');
+        }
+      }
+    }
+  </script>
+</body>
+</html>

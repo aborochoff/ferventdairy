@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Company - Fervent Dairy</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .page-content {
+      background-color: rgba(255, 255, 255, 0.95);
+      margin: 50px auto;
+      padding: 40px;
+      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      color: #333;
+      line-height: 1.6;
+    }
+    .back-link {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      transition: background-color 0.3s;
+    }
+    .back-link:hover {
+      background-color: #0056b3;
+    }
+    .contact-info {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 30px;
+      border-left: 4px solid #007bff;
+    }
+  </style>
+</head>
+<body>
+  <nav class="menu">
+    <div class="menu-icon" onclick="toggleDropdown()">
+      <div class="hamburger"></div>
+      <div class="hamburger"></div>
+      <div class="hamburger"></div>
+    </div>
+    <div class="dropdown" id="dropdown">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="company.html">Company</a>
+    </div>
+  </nav>
+
+  <div class="page-content">
+    <a href="index.html" class="back-link">← Back to Home</a>
+    
+    <h1>Our Company</h1>
+    
+    <p>Fervent Dairy has been serving communities with premium dairy products since our founding. We are more than just a dairy company - we are stewards of tradition, quality, and sustainable practices.</p>
+    
+    <h2>Company History</h2>
+    <p>Established with the vision of connecting consumers to the finest dairy products, Fervent Dairy has grown from a small local operation to a trusted name in quality dairy goods. Our journey has been marked by continuous innovation while staying true to traditional dairy craftsmanship.</p>
+    
+    <h2>Our Values</h2>
+    <ul>
+      <li><strong>Quality:</strong> Never compromising on the standards that define our products</li>
+      <li><strong>Sustainability:</strong> Supporting environmentally responsible farming practices</li>
+      <li><strong>Community:</strong> Building lasting relationships with farmers and customers</li>
+      <li><strong>Innovation:</strong> Continuously improving our processes and products</li>
+      <li><strong>Transparency:</strong> Open communication about our sourcing and production methods</li>
+    </ul>
+    
+    <h2>Leadership Team</h2>
+    <p>Our experienced leadership team brings decades of expertise in dairy production, sustainable agriculture, and business management. Together, we ensure that Fervent Dairy continues to deliver excellence in every product.</p>
+    
+    <div class="contact-info">
+      <h3>Get In Touch</h3>
+      <p>We'd love to hear from you! Whether you're interested in our products, partnerships, or have questions about our company, don't hesitate to reach out.</p>
+      <p><strong>Email:</strong> info@ferventdairy.com<br>
+      <strong>Phone:</strong> (555) 123-DAIRY<br>
+      <strong>Address:</strong> 123 Dairy Lane, Farm Valley, State 12345</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleDropdown() {
+      document.getElementById("dropdown").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.menu-icon') && !event.target.matches('.hamburger')) {
+        var dropdown = document.getElementById("dropdown");
+        if (dropdown.classList.contains('show')) {
+          dropdown.classList.remove('show');
+        }
+      }
+    }
+  </script>
+</body>
+</html>

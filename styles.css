@@ -1,8 +1,78 @@
-body
-{
-background-color:#2c2c2c;
-background-image:url('ferventdairy.png');
-background-repeat:no-repeat;
-background-position:center center;
-background-size:contain;
+body {
+  background-color: #2c2c2c;
+  background-image: url('ferventdairy.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Menu positioned in top right */
+.menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Hamburger menu icon */
+.menu-icon {
+  cursor: pointer;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+/* Dropdown menu */
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 5px;
+  background-color: white;
+  min-width: 120px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dropdown a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.dropdown a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show dropdown when active */
+.dropdown.show {
+  display: block;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .menu {
+    top: 15px;
+    right: 15px;
+  }
+  
+  .dropdown {
+    min-width: 100px;
+  }
 } 
